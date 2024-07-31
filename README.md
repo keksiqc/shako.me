@@ -1,6 +1,6 @@
 # Shakō
 
-Shakō is my personal linktree alternative. Everyone is welcome to use it, but please keep in mind that this is a personal project and not affiliated with Linktree.
+The hosted version of [Shakō](https://github.com/keksiqc/shako).
 
 ## Tech stack
 
