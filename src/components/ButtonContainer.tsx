@@ -8,7 +8,7 @@ export function ButtonContainer({ config }: { config: Config }) {
     <section className="flex flex-col gap-3">
       {/* icon buttons */}
       <div className="flex items-center justify-center gap-3">
-        {config.iconButtons.map((button, index) => (
+        {config.iconButtons?.map((button, index) => (
           <Button
             variant="secondary"
             size="icon"
@@ -25,7 +25,7 @@ export function ButtonContainer({ config }: { config: Config }) {
       </div>
 
       {/* buttons */}
-      {config.buttons.map((button, index) => (
+      {config.buttons?.map((button, index) => (
         <Button
           variant="outline"
           size="xl"
