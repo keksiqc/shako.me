@@ -22,7 +22,7 @@ export function Home() {
         <Button
           variant="default"
           size="lg"
-          onClick={() => window.open("https://github.com/yourusername/shako")}
+          onClick={() => window.open("https://github.com/keksiqc/shako.me")}
         >
           Get Started
         </Button>
