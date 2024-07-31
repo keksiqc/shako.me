@@ -5,8 +5,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Skeleton } from "@/components/ui/skeleton"
 
 export function UserContainer({ config }: { config: Config }) {
-  let userName = config.user?.name
-  let avatarUrl = config.user?.avatar
+  let userName: string | null | undefined = config.user?.name
+  let avatarUrl: string | null | undefined = config.user?.avatar
 
   if (!userName || !avatarUrl) {
     const { data } = useLanyard(config.discordID)
