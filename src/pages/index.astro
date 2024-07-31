@@ -1,5 +1,5 @@
 ---
-import { Button } from "@/components/ui/button"
+import { Home } from "@/components/Home"
 import { ModeToggle } from "@/components/ModeToggle"
 
 import Layout from "../layouts/Layout.astro"
@@ -17,39 +17,7 @@ import "../styles/globals.css"
     <div
       class="flex min-h-screen flex-col items-center justify-center gap-4 text-center"
     >
-      <h1
-        class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl"
-      >
-        Welcome to Shako
-      </h1>
-      <p class="max-w-2xl text-lg text-muted-foreground">
-        Shako is a simple, customizable link page for your online presence.
-        To get started, create a <code
-          class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono"
-          >[user].config.ts</code
-        > file in the <code
-          class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono"
-          >/pages</code
-        > directory with your personal information and social links.
-      </p>
-      <div class="flex gap-4">
-        <Button
-          variant="default"
-          size="lg"
-          onClick={() =>
-            window.open("https://github.com/yourusername/shako", "_blank")}
-        >
-          GitHub Repo
-        </Button>
-        <Button
-          variant="outline"
-          size="lg"
-          onClick={() =>
-            window.open("https://github.com/keksiqc/shako", "_blank")}
-        >
-          Self Host Shako
-        </Button>
-      </div>
+      <Home client:load />
     </div>
   </main>
 </Layout>
