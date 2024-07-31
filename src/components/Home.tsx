@@ -4,10 +4,10 @@ export function Home() {
   return (
     <>
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-        Welcome to Shako
+        Welcome to Shakō
       </h1>
       <p className="max-w-2xl text-lg text-muted-foreground">
-        Shako is a simple, customizable link page for your online presence. To
+        Shakō is a simple, customizable link page for your online presence. To
         get started, create a{" "}
         <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono">
           [user].config.ts
@@ -24,14 +24,14 @@ export function Home() {
           size="lg"
           onClick={() => window.open("https://github.com/yourusername/shako")}
         >
-          GitHub Repo
+          Get Started
         </Button>
         <Button
           variant="outline"
           size="lg"
           onClick={() => window.open("https://github.com/keksiqc/shako")}
         >
-          Self Host Shako
+          Self Host
         </Button>
       </div>
     </>
