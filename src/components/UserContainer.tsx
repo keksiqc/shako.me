@@ -9,9 +9,11 @@ export function UserContainer({ config }: { config: Config }) {
   let avatarUrl: string | null | undefined = config.user?.avatar
 
   if (!userName || !avatarUrl) {
-    const { data } = useLanyard(config.discordID)
-    userName = data?.discord_user.global_name
-    avatarUrl = `https://cdn.discordapp.com/avatars/${config.discordID}/${data?.discord_user.avatar}.webp?size=256`
+    if (config.discordID) {
+      const { data } = useLanyard(config.discordID)
+      userName = data?.discord_user.global_name
+      avatarUrl = `https://cdn.discordapp.com/avatars/${config.discordID}/${data?.discord_user.avatar}.webp?size=256`
+    }
   }
 
   return (
