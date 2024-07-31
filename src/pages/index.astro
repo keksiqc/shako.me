@@ -1,33 +1,55 @@
 ---
-import { ButtonContainer } from "@/components/ButtonContainer"
+import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/ModeToggle"
-import { UserContainer } from "@/components/UserContainer"
-import { Footer } from "@/components/Footer"
 
-import config from "../config"
 import Layout from "../layouts/Layout.astro"
 
 import "../styles/globals.css"
 ---
 
-<Layout title={config.title}>
-  <!-- main container -->
+<Layout title="Shako">
   <main class="items-center justify-center p-4">
     <!-- mode toggle -->
     <div class="absolute right-0 top-0 p-4">
       <ModeToggle client:load />
     </div>
 
-    <!-- content container -->
-    <div class="m-auto max-w-md">
-      <!-- user container -->
-      <UserContainer client:load />
-
-      <!-- button container -->
-      <ButtonContainer client:load />
+    <div
+      class="flex min-h-screen flex-col items-center justify-center gap-4 text-center"
+    >
+      <h1
+        class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl"
+      >
+        Welcome to Shako
+      </h1>
+      <p class="max-w-2xl text-lg text-muted-foreground">
+        Shako is a simple, customizable link page for your online presence.
+        To get started, create a <code
+          class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono"
+          >[user].config.ts</code
+        > file in the <code
+          class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono"
+          >/pages</code
+        > directory with your personal information and social links.
+      </p>
+      <div class="flex gap-4">
+        <Button
+          variant="default"
+          size="lg"
+          onClick={() =>
+            window.open("https://github.com/yourusername/shako", "_blank")}
+        >
+          GitHub Repo
+        </Button>
+        <Button
+          variant="outline"
+          size="lg"
+          onClick={() =>
+            window.open("https://github.com/keksiqc/shako", "_blank")}
+        >
+          Self Host Shako
+        </Button>
+      </div>
     </div>
-
-    <!-- footer -->
-    <Footer />
   </main>
 </Layout>
