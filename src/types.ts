@@ -21,6 +21,6 @@ export interface Config {
   user?: User
   discordID?: Snowflake
   lanyardUrl?: string
-  iconButtons: IconButton[]
-  buttons: Button[]
+  iconButtons?: IconButton[]
+  buttons?: Button[]
 }
