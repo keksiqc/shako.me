@@ -1,4 +1,4 @@
-import type { Config } from "./types"
+import type { Config } from "../src/types"
 
 const config: Config = {
   title: "Shako - Keksi",

@@ -1,10 +1,10 @@
-import config from "@/config"
+import type { Config } from "@/types"
 import { useLanyard } from "use-lanyard"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Skeleton } from "@/components/ui/skeleton"
 
-export function UserContainer() {
+export function UserContainer({ config }: { config: Config }) {
   const { data } = useLanyard(config.discordID)
 
   return (

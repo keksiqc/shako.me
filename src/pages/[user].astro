@@ -1,0 +1,42 @@
+---
+import { ButtonContainer } from "@/components/ButtonContainer"
+import { ModeToggle } from "@/components/ModeToggle"
+import { UserContainer } from "@/components/UserContainer"
+import { Footer } from "@/components/Footer"
+
+import Layout from "../layouts/Layout.astro"
+
+import "../styles/globals.css"
+
+const { user } = Astro.params
+
+let config;
+try {
+  config = await import(`../../pages/${user}.config.ts`).then(m => m.default);
+} catch (error) {
+  return Astro.redirect('/');
+}
+
+---
+
+<Layout title={config.title}>
+  <!-- main container -->
+  <main class="items-center justify-center p-4">
+    <!-- mode toggle -->
+    <div class="absolute right-0 top-0 p-4">
+      <ModeToggle client:load />
+    </div>
+
+    <!-- content container -->
+    <div class="m-auto max-w-md">
+      <!-- user container -->
+      <UserContainer config={config} client:load />
+
+      <!-- button container -->
+      <ButtonContainer config={config} client:load />
+    </div>
+
+    <!-- footer -->
+    <Footer />
+  </main>
+</Layout>
