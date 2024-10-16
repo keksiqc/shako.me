@@ -12,7 +12,7 @@ const config: Config = {
   iconButtons: [
     {
       icon: "githubsponsors",
-      url: "https://discord.gg/mcR2mJSBy5",
+      url: "https://discord.gg/godz",
     },
   ],
   buttons: [
@@ -27,9 +27,9 @@ const config: Config = {
       url: "https://discord.com/users/1190760564000030741",
     },
     {
-      name: "ImGui Service",
+      name: "Custom Bots, IMGUI and more",
       icon: "discord",
-      url: "https://discord.gg/mcR2mJSBy5",
+      url: "https://discord.gg/godz",
     },
     {
       name: "Steam",
