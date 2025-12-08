@@ -1,8 +1,8 @@
 ---
 import { ButtonContainer } from "@/components/ButtonContainer"
+import { Footer } from "@/components/Footer"
 import { ModeToggle } from "@/components/ModeToggle"
 import { UserContainer } from "@/components/UserContainer"
-import { Footer } from "@/components/Footer"
 
 import Layout from "../layouts/Layout.astro"
 
@@ -10,13 +10,12 @@ import "../styles/globals.css"
 
 const { user } = Astro.params
 
-let config;
+let config
 try {
-  config = await import(`../../pages/${user}.config.ts`).then(m => m.default);
+  config = await import(`../../pages/${user}.config.ts`).then((m) => m.default)
 } catch (error) {
-  return Astro.redirect('/');
+  return Astro.redirect("/")
 }
-
 ---
 
 <Layout title={config.title}>
